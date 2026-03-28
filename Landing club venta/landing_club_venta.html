@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>Clases gratuitas de venta – Leonardo Alaniz</title>
+    <meta name="description" content="Aprendé a vender con seguridad, sin trabarte, sin dudar y sin sentir que estás molestando. Clases gratis todos los jueves a las 19hs." />
+    <meta property="og:title" content="Clases gratuitas – Club de la Venta" />
+    <meta property="og:description" content="Aprendé a vender con seguridad. Clases gratis todos los jueves a las 19hs." />
+
+    <link href="https://bu-cdn.tiendup.com/static/fonts/material/materialicons.min.css" rel="stylesheet">
+    <link href="https://bu-cdn.tiendup.com/static/ui_payments/1.3/css/ui-payments-methods.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://bu-cdn.tiendup.com/business/50374/themes/lite/assets/css/metropolis.css?v=2" />
+    <link rel="stylesheet" type="text/css" href="https://bu-cdn.tiendup.com/business/50374/themes/lite/assets/css/uikit.lite2.min.css?v=2" />
+    <link rel="stylesheet" type="text/css" href="https://bu-cdn.tiendup.com/business/50374/themes/lite/assets/css/style.css?v=2" />
+    <link rel="stylesheet" type="text/css" href="https://bu-cdn.tiendup.com/business/50374/themes/lite/assets/css/sweetalert.css?v=2" />
+    <link rel="stylesheet" type="text/css" href="https://bu-cdn.tiendup.com/business/50374/themes/lite/assets/vendor/intl-tel-input-17.0.0/css/intlTelInput.min.css?v=2" />
+    <link rel="stylesheet" type="text/css" href="https://bu-cdn.tiendup.com/static/store/modal.min.css?v=2" />
+
+    <!-- Facebook Pixel -->
+    <meta name="facebook-domain-verification" content="oc7kcz97i0i0lqxjhaqnhh41fwtjj3">
+    <script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+        document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init', '1086960523638948');fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1086960523638948&ev=PageView&noscript=1"/></noscript>
+
+    <style>#purchase-modal.uk-modal {z-index: 99999}</style>
+
+    <!-- TiendUp theme variables (sin cambios) -->
+    <style type="text/css">
+        :root {
+            --brand-hue: 221; --brand-saturation: 90%; --brand-lightness: 49%;
+            --on-brand-primary-hue: 0; --on-brand-primary-saturation: 0%; --on-brand-primary-lightness: 100%;
+            --background-hue: 0; --background-saturation: 0%; --background-lightness: 100%;
+            --text-hue: 0; --text-saturation: 0%; --text-lightness: 13%;
+            --btn-bg-hue: 221; --btn-bg-saturation: 90%; --btn-bg-lightness: 49%;
+            --btn-text-hue: 0; --btn-text-saturation: 0%; --btn-text-lightness: 100%;
+            --secondary-hue: 120; --secondary-saturation: 3%; --secondary-lightness: 21%;
+            --on-secondary-hue: 0; --on-secondary-saturation: 0%; --on-secondary-lightness: 100%;
+            --link-hue: 221; --link-saturation: 90%; --link-lightness: 49%;
+            --brand-color: hsl(var(--brand-hue) var(--brand-saturation) var(--brand-lightness));
+            --on-brand-primary-color: hsl(var(--on-brand-primary-hue) var(--on-brand-primary-saturation) var(--on-brand-primary-lightness));
+            --background-color: hsl(var(--background-hue) var(--background-saturation) var(--background-lightness));
+            --text-color: hsl(var(--text-hue) var(--text-saturation) var(--text-lightness));
+            --button-background-color: hsl(var(--btn-bg-hue) var(--btn-bg-saturation) var(--btn-bg-lightness));
+            --button-text-color: hsl(var(--btn-text-hue) var(--btn-text-saturation) var(--btn-text-lightness));
+            --secondary-color: hsl(var(--secondary-hue) var(--secondary-saturation) var(--secondary-lightness));
+            --on-secondary-color: hsl(var(--on-secondary-hue) var(--on-secondary-saturation) var(--on-secondary-lightness));
+            --link-color: hsl(var(--link-hue) var(--link-saturation) var(--link-lightness));
+            --background-muted-color: hsl(var(--background-hue) var(--background-saturation) calc(var(--background-lightness) - 4%));
+            --text-muted-color: hsl(var(--text-hue) var(--text-saturation) calc(var(--text-lightness) + 30%));
+            --border-color: hsla(var(--text-hue), var(--text-saturation), var(--text-lightness), .18);
+            --overlay-default-background-color: hsla(var(--background-hue), var(--background-saturation), var(--background-lightness), .25);
+            --state-success-color: #13b288; --state-on-success-color: #FFFFFF;
+            --state-warning-color: #EC7F4B; --state-on-warning-color: #FFFFFF;
+            --state-danger-color: #eb4b48; --state-on-danger-color: #FFFFFF;
+            --default-border-rounded-radius: 5px;
+            --default-button-font-weight: bold;
+            --default-button-text-transform: none;
+            --default-heading-weight: bold;
+        }
+        html { background: var(--background-color); color: var(--text-color); }
+        .uk-button { border-radius: var(--global-border-rounded-radius, var(--default-border-rounded-radius)); font-weight: var(--global-button-font-weight, var(--default-button-font-weight)); text-transform: var(--global-button-text-transform, var(--default-button-text-transform)); }
+        .uk-button-primary { background-color: var(--button-background-color); color: var(--button-text-color); }
+        .uk-button-primary:focus, .uk-button-primary:hover { background-color: hsl(var(--btn-bg-hue) var(--btn-bg-saturation) calc(var(--btn-bg-lightness) - 10%)); color: var(--button-text-color); }
+        .uk-section-default { background-color: var(--background-color); color: var(--text-color); }
+        .uk-section-muted, .uk-background-muted { background: var(--background-muted-color); color: var(--text-color); }
+        .uk-section-secondary { background-color: var(--secondary-color, #222222); }
+        .uk-section-secondary:not(.uk-preserve-color) { color: var(--on-secondary-color, #FFFFFF); }
+        .uk-h1,.uk-h2,.uk-h3,.uk-h4,h1,h2,h3,h4 { font-weight: var(--default-heading-weight); color: var(--text-color); }
+        .uk-section-secondary:not(.uk-preserve-color) h1,
+        .uk-section-secondary:not(.uk-preserve-color) h2,
+        .uk-section-secondary:not(.uk-preserve-color) h3,
+        .uk-section-secondary:not(.uk-preserve-color) .uk-h1,
+        .uk-section-secondary:not(.uk-preserve-color) .uk-h2,
+        .uk-section-secondary:not(.uk-preserve-color) .uk-h3 { color: var(--on-secondary-color, #fff); }
+        .uk-badge { background: var(--brand-color); color: var(--on-brand-primary-color); }
+        .tiendup-link path { fill: var(--text-muted-color); }
+        .tiendup-link:hover path { fill: var(--link-color, var(--brand-color)); }
+    </style>
+
+    <!-- Fonts -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+        html, body, h1, h2, h3, h4, h5, h6,
+        .uk-h1, .uk-h2, .uk-h3, .uk-h4,
+        .uk-navbar-nav > li > a, .uk-navbar-item, .uk-navbar-toggle, .uk-logo {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+
+    <!-- Custom styles mejorados -->
+    <style>
+        /* ── Paleta extendida ── */
+        :root {
+            --accent: #4f46e5;        /* índigo vivo */
+            --accent-light: #eef2ff;
+            --accent-mid: #818cf8;
+            --green: #10b981;
+            --green-light: #d1fae5;
+            --dark: #0f172a;
+            --mid: #334155;
+            --soft: #f8fafc;
+            --border-soft: rgba(79,70,229,.15);
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+        }
+
+        /* ── Reset / base ── */
+        * { box-sizing: border-box; }
+        body { overflow-x: hidden; }
+
+        /* ── HERO ── */
+        .hero-section {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 55%, #1e1b4b 100%);
+            color: #fff;
+            padding: 80px 20px 90px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -120px; right: -120px;
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(99,102,241,.3) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            bottom: -80px; left: -80px;
+            width: 350px; height: 350px;
+            background: radial-gradient(circle, rgba(16,185,129,.2) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(99,102,241,.2);
+            border: 1px solid rgba(99,102,241,.4);
+            color: #a5b4fc;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 50px;
+            margin-bottom: 24px;
+            letter-spacing: .4px;
+        }
+        .hero-badge span.dot {
+            width: 7px; height: 7px;
+            background: #10b981;
+            border-radius: 50%;
+            animation: pulse-dot 1.8s infinite;
+        }
+        @keyframes pulse-dot {
+            0%,100% { opacity:1; transform:scale(1); }
+            50% { opacity:.5; transform:scale(1.4); }
+        }
+        .hero-title {
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            font-weight: 800;
+            line-height: 1.15;
+            color: #fff;
+            margin: 0 0 20px;
+        }
+        .hero-title em {
+            font-style: normal;
+            background: linear-gradient(90deg, #818cf8, #34d399);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-sub {
+            font-size: 1.1rem;
+            color: #94a3b8;
+            margin: 0 0 36px;
+            line-height: 1.6;
+            max-width: 540px;
+        }
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #4f46e5, #6366f1);
+            color: #fff !important;
+            font-size: 1rem;
+            font-weight: 700;
+            padding: 16px 32px;
+            border-radius: 50px;
+            text-decoration: none !important;
+            box-shadow: 0 8px 32px rgba(79,70,229,.45);
+            transition: transform .2s, box-shadow .2s;
+            border: none;
+        }
+        .hero-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(79,70,229,.55);
+            color: #fff !important;
+        }
+        .hero-cta svg { flex-shrink: 0; }
+        .hero-schedule {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #64748b;
+            font-size: .88rem;
+        }
+        .hero-schedule svg { color: #10b981; flex-shrink: 0; }
+
+        /* ── DOLOR (pain section) ── */
+        .pain-section {
+            background: #fff;
+            padding: 70px 20px;
+        }
+        .pain-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-left: 4px solid var(--accent);
+            border-radius: var(--radius-lg);
+            padding: 24px 28px;
+            transition: box-shadow .2s;
+        }
+        .pain-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,.07); }
+        .pain-card p {
+            margin: 0;
+            font-size: 1rem;
+            color: var(--mid);
+            line-height: 1.6;
+        }
+        .pain-card p strong { color: var(--dark); }
+        .pain-resolution {
+            background: linear-gradient(135deg, var(--accent-light), #f0fdf4);
+            border: 1px solid var(--border-soft);
+            border-radius: var(--radius-xl);
+            padding: 32px 36px;
+            text-align: center;
+        }
+        .pain-resolution p {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* ── LO QUE VAS A APRENDER ── */
+        .learn-section {
+            background: var(--soft);
+            padding: 80px 20px;
+        }
+        .section-label {
+            display: inline-block;
+            background: var(--accent-light);
+            color: var(--accent);
+            font-size: .78rem;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            padding: 5px 14px;
+            border-radius: 50px;
+            margin-bottom: 14px;
+        }
+        .learn-card {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: var(--radius-xl);
+            padding: 32px 28px;
+            height: 100%;
+            transition: transform .2s, box-shadow .2s;
+            position: relative;
+        }
+        .learn-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px rgba(0,0,0,.09);
+        }
+        .learn-icon {
+            width: 54px; height: 54px;
+            border-radius: 14px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.6rem;
+            margin-bottom: 18px;
+        }
+        .learn-icon.blue { background: var(--accent-light); }
+        .learn-icon.green { background: var(--green-light); }
+        .learn-icon.purple { background: #f3e8ff; }
+        .learn-card h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin: 0 0 10px;
+        }
+        .learn-card p {
+            font-size: .92rem;
+            color: var(--mid);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* ── TESTIMONIOS ── */
+        .testi-section {
+            background: linear-gradient(160deg, #0f172a 0%, #1e1b4b 100%);
+            padding: 80px 20px;
+            color: #fff;
+        }
+        .testi-card {
+            background: rgba(255,255,255,.05);
+            border: 1px solid rgba(255,255,255,.1);
+            border-radius: var(--radius-xl);
+            padding: 28px 24px;
+            height: 100%;
+            position: relative;
+        }
+        .testi-card::before {
+            content: '"';
+            position: absolute;
+            top: 16px; left: 22px;
+            font-size: 5rem;
+            line-height: 1;
+            color: rgba(99,102,241,.3);
+            font-family: Georgia, serif;
+            pointer-events: none;
+        }
+        .testi-card p {
+            font-size: .95rem;
+            color: #cbd5e1;
+            line-height: 1.7;
+            margin: 0 0 20px;
+            padding-top: 28px;
+        }
+        .testi-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .testi-avatar {
+            width: 44px; height: 44px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid rgba(99,102,241,.5);
+        }
+        .testi-name {
+            font-weight: 700;
+            color: #f1f5f9;
+            font-size: .9rem;
+        }
+        .testi-handle {
+            color: #64748b;
+            font-size: .8rem;
+        }
+        .stars { color: #fbbf24; font-size: .85rem; margin-bottom: 4px; }
+
+        /* ── BIO ── */
+        .bio-section {
+            background: #fff;
+            padding: 80px 20px;
+        }
+        .bio-img-wrap {
+            position: relative;
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: 0 24px 60px rgba(0,0,0,.15);
+        }
+        .bio-img-wrap img {
+            width: 100%;
+            display: block;
+            border-radius: var(--radius-xl);
+        }
+        .bio-img-badge {
+            position: absolute;
+            bottom: 20px; left: 20px;
+            background: rgba(15,23,42,.85);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,255,255,.1);
+            color: #fff;
+            padding: 10px 16px;
+            border-radius: 12px;
+            font-size: .82rem;
+            font-weight: 600;
+        }
+        .bio-img-badge span { color: #34d399; }
+        .bio-content { padding-left: 20px; }
+        .bio-content h2 {
+            font-size: clamp(1.7rem, 3vw, 2.4rem);
+            font-weight: 800;
+            color: var(--dark);
+            margin: 0 0 6px;
+        }
+        .bio-tagline {
+            font-size: 1rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .bio-content p {
+            font-size: .97rem;
+            color: var(--mid);
+            line-height: 1.75;
+            margin-bottom: 14px;
+        }
+        .bio-stats {
+            display: flex;
+            gap: 28px;
+            margin: 28px 0;
+            flex-wrap: wrap;
+        }
+        .bio-stat-item { text-align: center; }
+        .bio-stat-num {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--accent);
+            line-height: 1;
+        }
+        .bio-stat-label {
+            font-size: .78rem;
+            color: var(--mid);
+            margin-top: 3px;
+        }
+
+        /* ── CTA FINAL ── */
+        .cta-final {
+            background: linear-gradient(135deg, #4f46e5 0%, #1e3a5f 100%);
+            padding: 80px 20px;
+            text-align: center;
+            color: #fff;
+        }
+        .cta-final h2 {
+            font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+            font-weight: 800;
+            color: #fff;
+            margin: 0 0 16px;
+        }
+        .cta-final p {
+            color: #a5b4fc;
+            font-size: 1rem;
+            margin: 0 0 36px;
+        }
+        .cta-btn-white {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #fff;
+            color: #4f46e5 !important;
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 16px 36px;
+            border-radius: 50px;
+            text-decoration: none !important;
+            box-shadow: 0 8px 32px rgba(0,0,0,.2);
+            transition: transform .2s, box-shadow .2s;
+        }
+        .cta-btn-white:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(0,0,0,.3);
+            color: #4f46e5 !important;
+        }
+        .cta-guarantee {
+            margin-top: 18px;
+            color: #94a3b8;
+            font-size: .83rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        /* ── Responsive helpers ── */
+        @media (max-width: 640px) {
+            .hero-section { padding: 60px 20px 70px; }
+            .bio-content { padding-left: 0; margin-top: 28px; }
+            .bio-stats { gap: 18px; }
+        }
+
+        /* ── Whatsapp float button ── */
+        .wa-float {
+            position: fixed;
+            bottom: 28px; right: 24px;
+            background: #25d366;
+            color: #fff;
+            width: 56px; height: 56px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 6px 24px rgba(37,211,102,.5);
+            text-decoration: none;
+            z-index: 9999;
+            transition: transform .2s;
+        }
+        .wa-float:hover { transform: scale(1.08); }
+
+        /* Cookie banner spacing */
+        @media screen and (max-width:480px) { #cookie-consent-banner {bottom:60px} }
+        @media screen and (min-width:481px) and (max-width:960px) { #cookie-consent-banner {bottom:80px} }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://bu-cdn.tiendup.com/business/50374/themes/lite/assets/js/uikit.min.js?v10"></script>
+    <script type="text/javascript" src="https://bu-cdn.tiendup.com/business/50374/themes/lite/assets/js/uikit-icons.min.js?v10"></script>
+</head>
+
+<body>
+
+    <div id="page-loading" style="display:none" class="uk-text-center">
+        <div class="uk-margin-large-top">
+            <img src="https://bu-cdn.tiendup.com/business/50374/images/logo_6946d6aa412ef_small.png" />
+        </div>
+        <h3 data-loading-message></h3>
+        <span uk-spinner="ratio:3"></span>
+    </div>
+
+    <div id="page-content" class="uk-offcanvas-content">
+        <div class="single-page">
+
+            <!-- ══════════════════════════════════
+                 HERO
+            ══════════════════════════════════ -->
+            <section class="hero-section">
+                <div style="max-width:700px; margin:0 auto; position:relative; z-index:1; text-align:center;">
+                    <div class="hero-badge">
+                        <span class="dot"></span>
+                        Clases en vivo · Gratis · Todos los jueves
+                    </div>
+                    <h1 class="hero-title">
+                        Aprendé a vender con seguridad<br>
+                        <em>aunque hoy te cueste.</em>
+                    </h1>
+                    <p class="hero-sub" style="margin:0 auto 36px;">
+                        Sin trabarte. Sin dudar al decir el precio.<br>
+                        Sin sentir que estás molestando.
+                    </p>
+                    <a class="hero-cta" href="https://chat.whatsapp.com/FzQOTnUSKHlJ2ByjPTRwFp?mode=gi_t">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.848L0 24l6.335-1.508A11.956 11.956 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.648-.49-5.176-1.349l-.37-.218-3.761.896.938-3.655-.242-.38A9.944 9.944 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+                        Unirme a las clases gratis
+                    </a>
+                    <div class="hero-schedule" style="justify-content:center;">
+                        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        Jueves 19:00 hs (Argentina) · Completamente gratuito
+                    </div>
+                </div>
+            </section>
+
+            <!-- ══════════════════════════════════
+                 DOLOR / PROBLEMA
+            ══════════════════════════════════ -->
+            <section class="pain-section">
+                <div style="max-width:860px; margin:0 auto;">
+                    <div style="text-align:center; margin-bottom:48px;">
+                        <span class="section-label">¿Te identificás con esto?</span>
+                        <h2 style="font-size:clamp(1.5rem,3vw,2.1rem); font-weight:800; color:var(--dark); margin:8px 0 0;">
+                            Tenés lo que ofrecer. Te falta la seguridad para decirlo.
+                        </h2>
+                    </div>
+                    <div class="uk-grid uk-grid-medium uk-child-width-1-1 uk-child-width-1-2@s" uk-grid>
+                        <div>
+                            <div class="pain-card">
+                                <p>Tenés un conocimiento, talento o servicio valioso… <strong>pero te cuesta venderlo con confianza.</strong></p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="pain-card">
+                                <p>Sentís que podrías ganar más, pero <strong>no sabés cómo comunicar lo que hacés</strong> de forma clara.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="pain-card">
+                                <p>Cuando alguien te pregunta el precio, <strong>dudás, justificás o bajás el valor</strong> sin que te lo pidan.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="pain-card">
+                                <p>Sentís que estás <strong>molestando cuando vendés</strong>, como si ofrecer tu trabajo fuera un problema.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pain-resolution" style="margin-top:40px;">
+                        <p>Estas clases son para vos. Vas a aprender a vender lo que hacés <strong>con seguridad, sin trabarte, sin dudar</strong> — y sin sentir que estás molestando.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ══════════════════════════════════
+                 QUÉ VAS A APRENDER
+            ══════════════════════════════════ -->
+            <section class="learn-section">
+                <div style="max-width:960px; margin:0 auto;">
+                    <div style="text-align:center; margin-bottom:52px;">
+                        <span class="section-label">Contenido de las clases</span>
+                        <h2 style="font-size:clamp(1.5rem,3vw,2.1rem); font-weight:800; color:var(--dark); margin:8px 0 10px;">
+                            Lo que vas a aprender
+                        </h2>
+                        <p style="color:var(--mid); font-size:.97rem; max-width:480px; margin:0 auto;">
+                            Herramientas concretas. Ejercicios reales. Resultados desde la primera clase.
+                        </p>
+                    </div>
+                    <div class="uk-grid uk-grid-medium uk-child-width-1-1 uk-child-width-1-3@m" uk-grid>
+                        <div>
+                            <div class="learn-card">
+                                <div class="learn-icon blue">💰</div>
+                                <h3>Decir tu precio con seguridad</h3>
+                                <p>Dejá de justificarte. Aprendé a hablar de tu valor con firmeza, sin bajar el precio por inseguridad.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="learn-card">
+                                <div class="learn-icon green">🛡️</div>
+                                <h3>Manejar el rechazo sin que te afecte</h3>
+                                <p>Entendé el proceso de ventas como lo que es: números, no juicio personal. Resistencia mental incluida.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="learn-card">
+                                <div class="learn-icon purple">🎯</div>
+                                <h3>Comunicar con claridad y autoridad</h3>
+                                <p>Explicá lo que hacés de forma simple, memorable y convincente. Sin rodeos ni palabras de relleno.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ══════════════════════════════════
+                 TESTIMONIOS
+            ══════════════════════════════════ -->
+            <section class="testi-section">
+                <div style="max-width:960px; margin:0 auto;">
+                    <div style="text-align:center; margin-bottom:52px;">
+                        <span class="section-label" style="background:rgba(99,102,241,.15); color:#a5b4fc;">Resultados reales</span>
+                        <h2 style="font-size:clamp(1.5rem,3vw,2.2rem); font-weight:800; color:#fff; margin:12px 0 0;">
+                            De inseguros a convincentes al vender.
+                        </h2>
+                    </div>
+                    <div class="uk-grid uk-grid-medium uk-child-width-1-1 uk-child-width-1-3@m" uk-grid>
+                        <div>
+                            <div class="testi-card">
+                                <div class="stars">★★★★★</div>
+                                <p>La formación me ayudó muchísimo a entender mejor las ventas y a sentirme más seguro a la hora de vender. Aprendí cosas muy útiles que ya estoy aplicando.</p>
+                                <div class="testi-author">
+                                    <img class="testi-avatar" src="https://bu-cdn.tiendup.com/business/50374/themes/lite/assets/img/o_1isu1sb1bf7k1lr3npe147i168225.jpeg" alt="Felipe Collar">
+                                    <div>
+                                        <div class="testi-name">Felipe Collar</div>
+                                        <div class="testi-handle">@felipe.collar</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="testi-card">
+                                <div class="stars">★★★★★</div>
+                                <p>Antes tenía muchos miedos a la hora de vender. Gracias al acompañamiento de Leonardo hoy la realidad es diferente y puedo vender de manera natural.</p>
+                                <div class="testi-author">
+                                    <img class="testi-avatar" src="https://bu-cdn.tiendup.com/business/50374/themes/lite/assets/img/o_1isu1tiems2rucm1uje1k431mkq2b.jpeg" alt="Franco Sanchez">
+                                    <div>
+                                        <div class="testi-name">Franco Sanchez</div>
+                                        <div class="testi-handle">@frannco_ads</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="testi-card">
+                                <div class="stars">★★★★★</div>
+                                <p>Superé mis miedos, sé resolver objeciones, hacer seguimientos, minado de leads y encontré mi propósito en las ventas digitales.</p>
+                                <div class="testi-author">
+                                    <img class="testi-avatar" src="https://bu-cdn.tiendup.com/business/50374/themes/lite/assets/img/o_1isunpbd0b2bh7etbf13ptvbv2h.jpeg" alt="Victor Espinoza">
+                                    <div>
+                                        <div class="testi-name">Victor Espinoza</div>
+                                        <div class="testi-handle">@victor_spinoza</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ══════════════════════════════════
+                 BIO
+            ══════════════════════════════════ -->
+            <section class="bio-section">
+                <div style="max-width:960px; margin:0 auto;">
+                    <div class="uk-grid uk-grid-large uk-flex-middle" uk-grid>
+                        <div class="uk-width-2-5@m">
+                            <div class="bio-img-wrap">
+                                <img src="https://bu-cdn.tiendup.com/business/50374/themes/lite/assets/img/o_1iueulmcc2m19lf1pqobqh4m124.jpeg" alt="Leonardo Alaniz">
+                                <div class="bio-img-badge">
+                                    Mentor de ventas<br><span>+ de 5 años en el campo</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uk-width-expand@m">
+                            <div class="bio-content">
+                                <span class="section-label">Quién te va a entrenar</span>
+                                <h2>Leonardo Alaniz</h2>
+                                <p class="bio-tagline">Mentor de ventas · Comunicación con autoridad</p>
+                                <p>Ayudo a emprendedores y profesionales a vender con seguridad: sin trabarse al hablar, sin dudar al decir el precio y sin sentir que están molestando.</p>
+                                <p>Después de años trabajando en ventas y liderando equipos, entendí que el problema no es la técnica… <strong>es la seguridad al comunicar.</strong></p>
+                                <p>Por eso creé un entrenamiento práctico para que pases de inseguro a convincente al vender.</p>
+                                <div class="bio-stats">
+                                    <div class="bio-stat-item">
+                                        <div class="bio-stat-num">+500</div>
+                                        <div class="bio-stat-label">alumnos entrenados</div>
+                                    </div>
+                                    <div class="bio-stat-item">
+                                        <div class="bio-stat-num">5+</div>
+                                        <div class="bio-stat-label">años en ventas</div>
+                                    </div>
+                                    <div class="bio-stat-item">
+                                        <div class="bio-stat-num">100%</div>
+                                        <div class="bio-stat-label">clases en vivo</div>
+                                    </div>
+                                </div>
+                                <a href="https://chat.whatsapp.com/FzQOTnUSKHlJ2ByjPTRwFp?mode=gi_t" class="hero-cta" style="font-size:.95rem; padding:14px 28px;">
+                                    <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.848L0 24l6.335-1.508A11.956 11.956 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.648-.49-5.176-1.349l-.37-.218-3.761.896.938-3.655-.242-.38A9.944 9.944 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+                                    Sumate a las clases gratis
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ══════════════════════════════════
+                 CTA FINAL
+            ══════════════════════════════════ -->
+            <section class="cta-final">
+                <div style="max-width:600px; margin:0 auto;">
+                    <span class="section-label" style="background:rgba(255,255,255,.1); color:#c7d2fe; margin-bottom:20px;">Una decisión. Cero riesgo.</span>
+                    <h2>El próximo jueves podés empezar a vender diferente.</h2>
+                    <p>Clases en vivo. Gratis. Todos los jueves a las 19:00 hs.</p>
+                    <a href="https://chat.whatsapp.com/FzQOTnUSKHlJ2ByjPTRwFp?mode=gi_t" class="cta-btn-white">
+                        <svg width="20" height="20" fill="#25d366" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.848L0 24l6.335-1.508A11.956 11.956 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.648-.49-5.176-1.349l-.37-.218-3.761.896.938-3.655-.242-.38A9.944 9.944 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+                        Unirme al grupo de WhatsApp
+                    </a>
+                    <div class="cta-guarantee">
+                        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                        Sin costo · Sin tarjeta · Sin excusas
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer TiendUp -->
+            <div class="uk-background-muted from-tiendup-footer">
+                <div class="uk-container uk-section-xsmall uk-width-5-6@m uk-text-center">
+                    <div class="uk-text-small uk-text-muted">
+                        <span id="by-tiendup"><span>Realizado con</span> <a class="tiendup-link" href="http://www.tiendup.com?utm_source=club-de-la-venta"><svg width="70" height="16" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M6.294 5.963c.57-.2 1.193-.2 1.763 0L14.24 8.13a7.158 7.158 0 0 1-7.095 6.155A7.158 7.158 0 0 1 .052 8.153ZM7.144 0c3.772 0 6.863 2.908 7.142 6.599L8.057 4.414c-.57-.2-1.192-.2-1.763 0L0 6.622C.268 2.92 3.364 0 7.144 0Z" fill="#E62464"/><g fill-rule="nonzero"><path d="M23.252 11.916v-1.861h-.955c-.747 0-1.066-.334-1.066-1.114V5.457h1.99V3.643h-1.99v-2.18H19.18v2.18h-1.432v1.814h1.352v3.946c0 1.543.828 2.513 2.594 2.513h1.56ZM25.344 2.608c.827 0 1.32-.477 1.32-1.304 0-.78-.493-1.273-1.32-1.273-.876 0-1.321.493-1.321 1.273 0 .827.445 1.304 1.32 1.304Zm1.05 9.308V3.643h-2.132v8.273h2.132ZM31.047 12.06c1.034 0 1.877-.255 2.53-.764.668-.525 1.066-1.177 1.177-1.957H32.67c-.207.636-.748.955-1.623.955-1.193 0-1.798-.732-1.814-1.926h5.633v-.827c0-1.162-.35-2.132-1.035-2.896-.684-.764-1.623-1.146-2.816-1.146-1.273 0-2.26.414-2.944 1.226-.684.811-1.018 1.83-1.018 3.07 0 1.242.35 2.26 1.066 3.071.716.796 1.687 1.194 2.928 1.194Zm-1.798-5.108c.048-1.002.62-1.67 1.766-1.67 1.066 0 1.623.668 1.67 1.67H29.25ZM37.8 11.916V7.334c0-1.161.685-1.893 1.703-1.893s1.527.557 1.527 1.654v4.821h2.132V6.491c0-1.83-1.177-2.992-3.007-2.992-1.034 0-1.814.366-2.355 1.082h-.063l-.16-.938h-1.909v8.273H37.8ZM47.227 12.06c.986 0 1.75-.35 2.275-1.035h.064l.223.891h1.909V.142h-2.132v4.392h-.064c-.525-.684-1.289-1.035-2.275-1.035-1.066 0-1.894.398-2.498 1.194-.605.795-.907 1.83-.907 3.087 0 1.288.302 2.323.907 3.102.62.78 1.448 1.178 2.498 1.178Zm-1.241-4.28c0-1.448.557-2.403 1.83-2.403 1.273 0 1.83.986 1.83 2.403 0 1.416-.573 2.402-1.83 2.402-1.257 0-1.83-.986-1.83-2.402Z" fill="#364A5E"/><path d="M57.974 8.368c0 1.13-.51 1.703-1.527 1.703-1.035 0-1.544-.573-1.544-1.703V3.643h-2.132v5.06c0 .954.318 1.75.939 2.402.62.636 1.527.955 2.72.955h.017c1.193 0 2.1-.319 2.72-.955.621-.652.94-1.448.94-2.403v-5.06h-2.133v4.726ZM63.47 15.56v-4.535h.064c.525.685 1.289 1.035 2.291 1.035 1.05 0 1.878-.398 2.483-1.194.604-.795.907-1.814.907-3.07 0-1.29-.303-2.324-.923-3.103-.62-.796-1.432-1.194-2.467-1.194-1.002 0-1.766.35-2.29 1.035h-.064l-.223-.891h-1.91V15.56h2.133Zm3.58-7.765c0 1.417-.556 2.387-1.83 2.387-.636 0-1.097-.223-1.4-.652-.286-.446-.429-1.019-.429-1.735 0-.716.143-1.288.446-1.734.302-.461.763-.684 1.384-.684 1.273 0 1.83.97 1.83 2.418Z" fill="#E62464"/></g></g></svg></a></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- WhatsApp flotante -->
+    <a class="wa-float" href="https://chat.whatsapp.com/FzQOTnUSKHlJ2ByjPTRwFp?mode=gi_t" title="Unirme al grupo">
+        <svg width="26" height="26" fill="#fff" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.848L0 24l6.335-1.508A11.956 11.956 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.648-.49-5.176-1.349l-.37-.218-3.761.896.938-3.655-.242-.38A9.944 9.944 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+    </a>
+
+    <!-- Cookie banner -->
+    <div st-gpdr-compliance id="cookie-consent-banner" class="uk-section-default uk-box-shadow-small uk-padding-small uk-position-bottom-left uk-position-fixed uk-position-z-index uk-width-large@m">
+        <div class="uk-margin-small-bottom uk-text-small">Utilizamos cookies propias y de terceros para mejorar la experiencia del usuario a través de su navegación. Si continuás navegando aceptás su uso.</div>
+        <button type="button" st-gpdr-compliance-button class="uk-button uk-button-primary uk-button-small">Entendido</button>
+    </div>
+
+    <input type="hidden" id="payment_url" value="https://payments.tiendup.com/checkout/50374/" />
+
+    <div id="store-modal" class="sfy-modal">
+        <div class="sfy-modal-dialog">
+            <span class="sfy-modal-close" data-st-close-modal>Cerrar X</span>
+            <div id="cart-modal-content" class="sfy-modal-content"></div>
+            <div class="sfy-modal-spinner"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var ST_params = { "domain": "https:\/\/leonardoalanizok.com\/", "assets_url": "https:\/\/bu-cdn.tiendup.com\/business\/50374\/themes\/lite\/assets\/", "sales_channel_id": "45260", "sales_channel_slug": "club-de-la-venta", "business_id": "50374", "environment": "production", "google_analytics_id": "UA-73394188-7", "google_analytics_domain": "http:\/\/leonardoalanizok.com\/", "lang": {}, "customer_json": null, "geolocation": { "currency": "", "city": "", "state": "", "country": "Argentina", "country_code": "AR" }, "current_page": "page", "facebook_app_id": null, "facebook_pixel_exclude_pending_orders": false, "payment_url": "https:\/\/payments.tiendup.com\/checkout\/50374\/", "mercadopago_public_key": null, "google_optimize_id": null, "sdk_modules": [ "https:\/\/bu-cdn.tiendup.com\/static\/store_js_sdk\/learning-module-sdk.min.js?v=29102020" ] };
+    </script>
+    <script src="https://bu-cdn.tiendup.com/static/store_js_sdk/sdk.min.js?v=27032026"></script>
+    <script type="text/javascript">var STModal = new ST.plugins.modal("#store-modal");</script>
+    <script type="text/javascript" src="https://bu-cdn.tiendup.com/business/50374/themes/lite/assets/js/sweetalert.min.js?v=2"></script>
+    <script type="text/javascript" src="https://bu-cdn.tiendup.com/business/50374/themes/lite/assets/js/scripts.js?v=2"></script>
+    <script type="text/javascript" src="https://bu-cdn.tiendup.com/business/50374/themes/lite/assets/js/validate.min.js?v=2"></script>
+    <script type="text/javascript" src="https://bu-cdn.tiendup.com/business/50374/themes/lite/assets/js/form_validations.js?v=2"></script>
+    <script type="text/javascript" src="https://bu-cdn.tiendup.com/business/50374/themes/lite/assets/vendor/intl-tel-input-17.0.0/js/intlTelInput-jquery.min.js?v=2"></script>
+
+</body>
+</html>
